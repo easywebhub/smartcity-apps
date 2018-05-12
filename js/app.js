@@ -10,6 +10,7 @@ var app = new Framework7({
   // App root data
   data: function () {
     return {
+      apibackend : 'http://103.199.18.44:2990/api',
       user: {
         firstName: 'John',
         lastName: 'Doe',

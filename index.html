@@ -36,11 +36,17 @@
         <div class="page">
           <div class="navbar">
             <div class="navbar-inner">
-              <div class="title">Left Panel</div>
+              <div class="title">Menu</div>
             </div>
           </div>
           <div class="page-content">
-            <div class="block">Left panel content goes here</div>
+            <div class="block">
+              <!--vừa đóng menu vừa chuyển trang, panel-close -->
+              <p> <a href="/profiles" class="panel-close">Thông tin cá nhân</a> </p>
+              <p>
+                <a class="panel-close" href="#">Đóng</a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -76,7 +82,7 @@
             <i class="icon material-icons md-only">home
               <span class="badge color-green">5</span>
             </i>
-            <span class="tabbar-label">SmartCity</span>
+            <span class="tabbar-label">Thành Phố Thông Minh</span>
           </a>
           <a href="#view-catalog" class="tab-link">
             <i class="icon f7-icons ios-only">list</i>
@@ -117,7 +123,7 @@
                   <i class="icon material-icons md-only">menu</i>
                 </a>
               </div> -->
-              <div class="title sliding">SmartCity</div>
+              <div class="title sliding">Thành Phố Thông Minh</div>
               <div class="right">
                 <a href="#" class="link icon-only panel-open" data-panel="left">
                   <i class="icon f7-icons ios-only">menu</i>
@@ -152,7 +158,7 @@
                 <li>
                   <a href="/map/" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Bản Đồ Đô Thị</div>
+                      <div class="item-title">Vị trí của bạn</div>
                     </div>
                   </a>
                 </li>
@@ -176,6 +182,9 @@
             <!-- <div class="block-title searchbar-hide-on-search">Page Loaders & Router</div> -->
             <div class="list links-list searchbar-hide-on-search">
               <ul>
+                <li>
+                  <a href="/gop-y/">Góp ý kiến</a>
+                </li>
                 <li>
                   <a href="/news/">Tin tức</a>
                 </li>
@@ -365,7 +374,7 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCV0GOd8rYpjvPAQ6vmpIss_wPKyH8CC_A&libraries=places,drawing,geometry"></script>
   <!-- Framework7 library -->
   <script src="framework7/js/framework7.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/axios.min.js"></script>
   <!-- App routes -->
   <script src="js/routes.js"></script>
 
