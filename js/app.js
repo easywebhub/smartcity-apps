@@ -67,7 +67,7 @@ app.on('pageInit', function (page) {
     //đã đăng nhập
   } else {
     //chưa đăng nhập: có thể hiện ra login
-    app.loginScreen.open('#my-login-screen');
+    //app.loginScreen.open('#my-login-screen');
   }
 });
 
