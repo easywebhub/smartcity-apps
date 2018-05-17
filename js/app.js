@@ -10,7 +10,7 @@ var app = new Framework7({
   // App root data
   data: function () {
     return {
-      apibackend : 'http://103.199.18.44:2990/api',
+      apibackend : 'https://backend.vinaas.com/api',
       user: {
         firstName: 'John',
         lastName: 'Doe',
@@ -57,7 +57,7 @@ var settingsView = app.views.create('#view-settings', {
 });
 
 //easyweb: login thành công, thiết lập accesstoken vào header
-var apibackend = 'http://103.199.18.44:2990/api';
+var apibackend = 'https://backend.vinaas.com/api';
 axios.defaults.baseURL = apibackend;
 axios.defaults.headers.common['Authorization'] = localStorage.accessToken;
 
@@ -84,8 +84,7 @@ $$('#my-signup-screen .signup-button').on('click', function () {
   //easyweb gọi api để cập nhật dữ liệu, lưu ở formData
   console.log(JSON.stringify(formData));
   app.dialog.alert(JSON.stringify(formData))
-  return;
-  axios.post('/Users', formData)
+  axios.post('/EasyUsers', formData)
     .then(function (response) {
         console.log('Đăng Ký thành công')
       localStorage.isAuthenticated = 'true';
@@ -119,7 +118,7 @@ function login() {
   //easyweb
   var credentials = { username: username, password: password }; //đặt tên là credentials: thông tin bảo mật
 
-  axios.post('/Users/login', credentials)
+  axios.post('/EasyUsers/login', credentials)
     .then(function (response) {
       console.log(response.data)
       if (response.data) {
@@ -144,7 +143,7 @@ function getUserInfo() {
   console.log('getUserInfo()')
   if (localStorage.isAuthenticated !== 'true') {
     //lấy thông tin đầy đủ của user
-    axios.get('/Users/' + localStorage.userId)
+    axios.get('/EasyUsers/' + localStorage.userId)
       .then(function (response) {
         console.log(response.data)
         var data = response.data;

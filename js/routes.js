@@ -198,7 +198,7 @@ routes = [{
 
         //easyweb gọi api để cập nhật dữ liệu, lưu ở formData
         console.log(JSON.stringify(formData));
-        axios.patch('/Users/' + formData.id, formData)
+        axios.patch('/EasyUsers/' + formData.id, formData)
           .then(function (response) {
             console.log('cập nhật thành công')
           })
@@ -234,7 +234,7 @@ routes = [{
 
     console.log('getUserInfo()')
     //lấy thông tin đầy đủ của user
-    axios.get('/Users/' + localStorage.userId)
+    axios.get('/EasyUsers/' + localStorage.userId)
       .then(function (response) {
         console.log(response.data)
         var data = response.data;

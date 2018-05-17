@@ -18,6 +18,16 @@
   - tự động load và binding dữ liệu
   - xem profiles.html , [commit](https://gitlab.com/vinaas/mobileapps/easyweb-f7/commit/c2c5f6a4836186577202e0677acc7337aae1e98a)
 
+### Tích hợp google maps
+- hiển thị bản đồ
+  - tọa độ có sẵn
+
+- vị trí hiện tại (current position)
+  - hoạt động với `localhost` hoặc `https`
+  - tham khảo [commit](https://gitlab.com/vinaas/mobileapps/easyweb-f7/commit/95650f202c7a8fc2c468ab0c5069874f091135d2)
+
+
+
 ## Framework 7
 
 ### Xử lý form dữ liệu
