@@ -89,9 +89,10 @@
 
           //easyweb gọi api để cập nhật dữ liệu, lưu ở formData
           console.log(JSON.stringify(formData));
-          axios.post('/Request/', formData)
+          axios.post('/Requests', formData)
           .then(function(response) {
             console.log('cập nhật thành công')
+            app.dialog.alert("Gửi Góp Ý Thành Công!! Cảm ơn Bạn Rất Nhiều")
           })
           .catch(function(error) {
             console.log('Thất bại')

@@ -81,21 +81,16 @@ $$('#my-signup-screen .signup-button').on('click', function () {
   if (!formData.email) {
     formData.email = formData.username + '@vinaas.com';
   }
-  //easyweb gọi api để cập nhật dữ liệu, lưu ở formData
-  console.log(JSON.stringify(formData));
-  app.dialog.alert(JSON.stringify(formData))
   axios.post('/EasyUsers', formData)
     .then(function (response) {
-        console.log('Đăng Ký thành công')
+      console.log('Đăng Ký thành công', response)
       localStorage.isAuthenticated = 'true';
       localStorage.username = data.username;
       localStorage.accessToken = data.id;
       localStorage.userId = data.userId;
       axios.defaults.headers.common['Authorization'] = localStorage.accessToken;
-    })
-    .catch(function (error) {
-      app.dialog.alert("Đăng Ký không thành công do tên bị trùng! Hãy thử lại với tên khác")
-      return;
+    }).catch(function (error) {
+     // app.dialog.alert("Đăng Ký không thành công do tên bị trùng! Hãy thử lại với tên khác")
     })
 
     app.popup.close('#my-signup-screen');
